@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Momentinhos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Texto animado no topo -->
+    <div id="amorAnimado">EU TE AMOOOOOOOOOOOO</div>
+
+    <!-- Botões principais -->
+    <button id="btnCuriosa" class="botao-curiosa" onclick="mostrarPolaroid()">Clique aqui se estiver curiosa</button>
+    <button id="btnMusica" class="botao-curiosa" onclick="mostrarMusica()">Ouça nossa música</button>
+
+    <!-- Polaroid inicial -->
+    <div class="polaroid" id="polaroidUnico" style="display:none;">
+        <div class="imagemnos">
+            <img src="img/Nósdoisjuntinhos.jpg" alt="Nósdoisjuntinhos" />
+            <h4>Esse foi o dia em que meus olhos se encantaram pelos seus...</h4>
+        </div>
+        <button class="botao-voltar" onclick="mostrarMomentinhos()">Mais momentinhos</button>
+    </div>
+
+    <!-- Container dos 5 polaroids espalhados -->
+    <div id="polaroidsContainer" style="display:none;">
+        <div class="polaroid pequena">
+            <div class="imagemnos">
+                <img src="img/one.jpg" alt="Momentinho 1" />
+                <h4>É inexplicável dizer como eu sou muito feliz em te amar.</h4>
+            </div>
+        </div>
+        <div class="polaroid pequena">
+            <div class="imagemnos">
+                <img src="img/two.jpg" alt="Momentinho 2" />
+                <h4>Em pequenos momentos da minha vida, eu amava muito estar pertinho de você.</h4>
+            </div>
+        </div>
+        <div class="polaroid pequena">
+            <div class="imagemnos">
+                <img src="img/tree.jpg" alt="Momentinho 3" />
+                <h4>Você sempre fez meus olhos brilharem. Sempre admirei muito essa pessoinha incrível que você é.</h4>
+            </div>
+        </div>
+        <div class="polaroid pequena">
+            <div class="imagemnos">
+                <img src="img/foorr.jpg" alt="Momentinho 4" />
+                <h4>Não odeie tanto esse dia, pois foi nele que eu descobri o quanto você era especial para mim e que eu sempre quis estar ao seu lado.</h4>
+            </div>
+        </div>
+        <div class="polaroid pequena">
+            <div class="imagemnos">
+                <img src="img/five.jpg" alt="Momentinho 5" />
+                <h4>Você pode não saber, mas desde muito cedo foi você quem sempre trouxe o meu sorriso.</h4>
+            </div>
+        </div>
+
+        <button id="btnVoltarAoComeco" class="botao-voltar" onclick="voltarPolaroidUnico()">Voltar ao começo</button>
+    </div>
+
+    <!-- Seção da música -->
+    <div id="musicaContainer" style="display:none;">
+        <h2 class="bububu">Essa musica eu quero mostra a você, representando meus sentimentos por ti, saiba que eu pra sempre te amarei</h2>
+        <div id="playerMusica">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L0_nXyTMyqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button class="botao-voltar" onclick="voltarInicio()">Voltar ao início</button>
+    </div>
+
+    <script>
+        const btnCuriosa = document.getElementById('btnCuriosa');
+        const btnMusica = document.getElementById('btnMusica');
+        const polaroidUnico = document.getElementById('polaroidUnico');
+        const polaroidsContainer = document.getElementById('polaroidsContainer');
+        const musicaContainer = document.getElementById('musicaContainer');
+
+        function mostrarPolaroid() {
+            btnCuriosa.style.display = 'none';
+            btnMusica.style.display = 'none';
+            polaroidUnico.style.display = 'block';
+        }
+
+        function mostrarMomentinhos() {
+            polaroidUnico.style.display = 'none';
+            polaroidsContainer.style.display = 'block';
+        }
+
+        function voltarPolaroidUnico() {
+            polaroidsContainer.style.display = 'none';
+            polaroidUnico.style.display = 'block';
+        }
+
+        function mostrarMusica() {
+            btnCuriosa.style.display = 'none';
+            btnMusica.style.display = 'none';
+            musicaContainer.style.display = 'block';
+        }
+
+        function voltarInicio() {
+            musicaContainer.style.display = 'none';
+            btnCuriosa.style.display = 'inline-block';
+            btnMusica.style.display = 'inline-block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  background-image: url('img/572706a9-0c83-40bf-96a2-26c0f4e89fb8.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 110vh;
+  backdrop-filter: brightness(0.9) saturate(1.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease;
+}
+
+#amorAnimado {
+    font-family: 'Dancing Script', cursive;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin: 20px 0 40px 0;
+    animation: pulseAmor 2.5s infinite;
+    user-select: none;
+    text-shadow: 0 0 15px #ff6699, 0 0 30px #ff3366;
+}
+#playerMusica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.bububu {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  margin: 30px 20px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(204, 51, 102, 0.7);
+  user-select: none;
+}
+
+@keyframes pulseAmor {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 0 0 8px #ff6699, 0 0 15px #ff3366;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+        text-shadow: 0 0 20px #ff99aa, 0 0 35px #ff6699;
+    }
+}
+.polaroid, .polaroid.pequena {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #ffb6c1;
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  animation: fadeInScale 0.6s ease forwards;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+}
+
+.polaroid:hover, .polaroid.pequena:hover {
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.6);
+}
+
+.polaroid {
+  width: 320px;
+  margin: 10px;
+}
+.imagemnos img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  animation: heartbeat 2s infinite;
+}
+
+.imagemnos h4 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  color: #cc3366;
+  margin: 0;
+}
+
+.botao-curiosa, .botao-voltar {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.botao-curiosa:hover, .botao-voltar:hover,
+.botao-curiosa:focus, .botao-voltar:focus {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.7);
+  outline: none;
+}
+
+#polaroidsContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  margin-top: 0;
+}
+
+/* Polaroids espalhados */
+.polaroid.pequena {
+  position: absolute;
+  width: 200px;
+  padding: 15px;
+}
+
+.polaroid.pequena:nth-child(1) {
+  top: 5%;
+  left: 5%;
+}
+
+.polaroid.pequena:nth-child(2) {
+  top: 4%;
+  right: 10%;
+}
+
+.polaroid.pequena:nth-child(3) {
+  top: 20%;
+  left: 20%;
+}
+
+.polaroid.pequena:nth-child(4) {
+  bottom: 20%;
+  right: 25%;
+}
+
+.polaroid.pequena:nth-child(5) {
+  bottom: 20%;
+  left: 35%;
+}
+
+/* Botão voltar fixo no rodapé central */
+#btnVoltarAoComeco {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  z-index: 15;
+  transition: background-color 0.3s ease;
+}
+
+#btnVoltarAoComeco:hover,
+#btnVoltarAoComeco:focus {
+  background-color: #ff94b0;
+  outline: none;
+}
+
+/* Animações */
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+  .polaroid {
+    width: 90vw;
+  }
+
+  .polaroid.pequena {
+    width: 150px !important;
+  }
+
+  .polaroid.pequena:nth-child(1) {
+    top: 5%;
+    left: 5%;
+  }
+
+  .polaroid.pequena:nth-child(2) {
+    top: 15%;
+    right: 5%;
+  }
+
+  .polaroid.pequena:nth-child(3) {
+    top: 55%;
+    left: 30%;
+  }
+
+  .polaroid.pequena:nth-child(4) {
+    bottom: 15%;
+    right: 15%;
+  }
+
+  .polaroid.pequena:nth-child(5) {
+    bottom: 5%;
+    left: 20%;
+  }
+}
