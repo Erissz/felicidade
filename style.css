@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-image: url('img/572706a9-0c83-40bf-96a2-26c0f4e89fb8.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  min-height: 110vh;
   backdrop-filter: brightness(0.9) saturate(1.2);
   display: flex;
   justify-content: center;
@@ -22,7 +16,7 @@ body {
   position: relative;
   overflow-x: hidden;
   transition: background-color 0.5s ease;
-}transition: background-color 0.5s ease;
+}
 
 #amorAnimado {
     font-family: 'Dancing Script', cursive;
